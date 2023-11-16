@@ -8,21 +8,21 @@ export const useProductStore = defineStore('product', {
             id: 1,
             title: "Everyday Fresh & Clean with Our Products",
             color: "#F0E8D5",
-            image: "/onion.png",
+            image: "images/onion.png",
             buColor: "green"
         },
         {
             id: 2,
             title: "Make your Breakfast Healthy and Easy",
             color: "#F3E8E8",
-            image: "/milk.png",
+            image: "images/milk.png",
             buColor: "green"
         },
         {
             id: 3,
             title: "The best Organic Products Online",
             color: "#E7EAF3",
-            image: "/vegetable.png",
+            image: "images/vegetable.png",
             buColor: "#FDC040"
         },
         ],
@@ -32,70 +32,70 @@ export const useProductStore = defineStore('product', {
             group: "Milks & Diaries",
             name: "Cake & Milk",
             color: "#F2FCE4",
-            image: "/burger.png"
+            image: "images/burger.png"
         },
         {
             id: 2,
             group: "Fruits",
             name: "Peach",
             color: "#FFFCEB",
-            image: "/peach.png"
+            image: "images/peach.png"
         },
         {
             id: 3,
             group: "Fruits",
             name: "Organic Kiwi",
             color: "#ECFFEC",
-            image: "/kiwi.png"
+            image: "images/kiwi.png"
         },
         {
             id: 4,
             group: "Fruits",
             name: "Red Apple",
             color: "#FEEFEA",
-            image: "/apple.png"
+            image: "images/apple.png"
         },
         {
             id: 5,
             group: "Coffees & Teas",
             name: "Snack",
             color: "#FFF3EB",
-            image: "/snack.png"
+            image: "images/snack.png"
         },
         {
             id: 6,
             group: "Fruits",
             name: "Black Plums",
             color: "#FFF3FF",
-            image: "/black.png"
+            image: "images/black.png"
         },
         {
             id: 7,
             group: "Vegetables",
             name: "Vegetables",
             color: "#F2FCE4",
-            image: "/cabbage.png"
+            image: "images/cabbage.png"
         },
         {
             id: 8,
             group: "Coffees & Teas",
             name: "Headphone",
             color: "#FFFCEB",
-            image: "/headset.png"
+            image: "images/headset.png"
         },
         {
             id: 9,
             group: "Milks & Diaries",
             name: "Cake & Milk",
             color: "#F2FCE4",
-            image: "/cakemilk.png"
+            image: "images/cakemilk.png"
         },
         {
             id: 10,
             group: "Fruits",
             name: "Orange",
             color: "#FFF3FF",
-            image: "/orange.png"
+            image: "images/orange.png"
         },
         ],
         products: [
@@ -103,7 +103,7 @@ export const useProductStore = defineStore('product', {
             id: 1,
             tag: "-17%",
             tagcol: "green",
-            image: "/mango.png",
+            image: "images/mango.png",
             category: 3,
             name: "Seeds of Change Organic Quinoa, Brown, & Red Rice",
             rate: "4.0",
@@ -116,7 +116,7 @@ export const useProductStore = defineStore('product', {
             id: 2,
             tag: "Hot",
             tagcol: "red",
-            image: "/corn.png",
+            image: "images/corn.png",
             category: 3,
             name: "All natural Italian-Style Chicken Meatballs",
             rate: "4.0",
@@ -129,7 +129,7 @@ export const useProductStore = defineStore('product', {
             id: 3,
             tag: "Sale",
             tagcol: "orange",
-            image: "/orange2.png",
+            image: "images/orange2.png",
             category: 3,
             name: "Angie's Boomchickapop Sweet & Salty Kettle Corn",
             rate: "4.0",
@@ -142,7 +142,7 @@ export const useProductStore = defineStore('product', {
             id: 4,
             tag: "",
             tagcol: "",
-            image: "/chili.png",
+            image: "images/chili.png",
             category: 3,
             name: "Foster Farms Takeout Crispy Classic Buffalo Wings",
             rate: "4.0",
@@ -155,7 +155,7 @@ export const useProductStore = defineStore('product', {
             id: 5,
             tag: "",
             tagcol: "",
-            image: "/lemon.png",
+            image: "images/lemon.png",
             category: 3,
             name: "Blue Diamonds Almonds Lightly Salted Vegetables",
             rate: "4.0",
@@ -168,7 +168,7 @@ export const useProductStore = defineStore('product', {
             id: 6,
             tag: "",
             tagcol: "",
-            image: "/fist.png",
+            image: "images/fist.png",
             category: 3,
             name: "Chobani Complete Vanilla Greek Yogurt",
             rate: "4.0",
@@ -181,7 +181,7 @@ export const useProductStore = defineStore('product', {
             id: 7,
             tag: "Sale",
             tagcol: "yellow",
-            image: "/fistLemon.png",
+            image: "images/fistLemon.png",
             category: 3,
             name: "Canada Dry Ginger Ale - 2 L Bottle - 200ml - 400g",
             rate: "4.0",
@@ -194,7 +194,7 @@ export const useProductStore = defineStore('product', {
             id: 8,
             tag: "",
             tagcol: "",
-            image: "/steak.png",
+            image: "images/steak.png",
             category: 3,
             name: "Encore Seafoods Stuffed Alaskan Salmon",
             rate: "4.0",
@@ -207,7 +207,7 @@ export const useProductStore = defineStore('product', {
             id: 9,
             tag: "",
             tagcol: "",
-            image: "/thinmeat.png",
+            image: "images/thinmeat.png",
             category: 3,
             name: "Gorton’s Beer Battered Fish Fillets with soft paper",
             rate: "4.0",
@@ -220,7 +220,7 @@ export const useProductStore = defineStore('product', {
             id: 10,
             tag: "Hot",
             tagcol: "red",
-            image: "/red-onion.png",
+            image: "images/red-onion.png",
             category: 3,
             name: "Haagen-Dazs Caramel Cone Ice Cream Ketchup",
             rate: "4.0",
