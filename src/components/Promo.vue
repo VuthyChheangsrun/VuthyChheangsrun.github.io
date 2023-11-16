@@ -1,10 +1,9 @@
 <template>
-    <div :style="`background-color: ${bg}`" id="wrapper">
-        
-        <span id="info">{{ text }}</span>
-        <MyButton id="button" :color="`${buColor}`" />
-        
-        <img :src="`${img}`" alt="">
+    <div :style="`background-color: ${bg}; background-image: url(${img});`" id="wrapper">
+        <div id="info">
+            <span>{{ text }}</span><br>
+            <MyButton id="button" :color="`${buColor}`" />
+        </div>
     </div>
 </template>
 
@@ -22,34 +21,26 @@
 
 <style scoped>
     #wrapper{
-        width: 512px;
+        width: 480px;
         height: 300px;
-        position: relative;
         border-radius: 7px;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-position: right bottom;; /* Center the image */
     }
     #info{
-        font-size: 30px;
         width: 50%;
-        position: absolute;
-        top: 22%;
-        left: 50px;
-        display: flex;
-        flex-direction: column;
-        z-index: 1;
+        height: 300px;
+        font-size: 30px;
+        margin-top: 25px;
+        margin-left: 25px;
+        position: relative;
     }
 
     #button{
         margin-top: auto;
         position: absolute;
-        bottom: 20%;
-        left: 50px;
-        z-index: 1;
+        bottom: 30%;
     }
 
-    img {
-        position: absolute;
-        bottom: 0px;
-        right: 0px;
-        z-index: 0;
-    }
 </style>
