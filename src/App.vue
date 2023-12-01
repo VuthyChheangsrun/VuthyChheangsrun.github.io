@@ -1,89 +1,87 @@
 <template>
-<div style="display: flex; flex-direction: column;">
-  <Menu title="Features Categories" :groups="groups" class="menu" />
-  <div id="cate">
-    <div v-for="cate in categories">
-      <Category :bg="cate.color" :img="cate.image" :name="cate.name" :ammount="cate.id" />
-    </div>
-    
-  </div>
-  <div id="promo">
-    <div v-for="pro in promotions">
-      <Promo :bg="pro.color" :img="pro.image" :text="pro.title" :buColor="pro.buColor"  />
+  <div id="topmenu">
+    <img src="images/Logo.png" alt="" style="height: 50px;">
+    <Search style="margin: auto 0 auto 0; margin-left: 50px;" />
+    <div style="display: flex; gap: 25px; margin-left: auto;">
+      <MenuItem icon="images/fi-rs-user.png" title="Account" dropdown="none" />
+      <MenuItem icon="images/icon-compare 1.png" title="Compare" dropdown="none" />
+      <MenuItem icon="images/fi-rs-heart.png" title="Wishlist" dropdown="none" />
+      <MenuItem icon="images/fi-rs-shopping-cart.png" title="Cart" dropdown="none" />
     </div>
   </div>
-  <Menu title="Popular Products" :groups="groups" />
+  
+  <div id="bottommenu">
+    <div id="browseallcate">
+      <img src="images/fi-rs-apps.png" alt="">
+      Browse All Categories
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+      </svg>
+    </div>
+    <div style="display: flex; gap: 25px;">
+      <MenuItem icon="images/fi-rs-flame 1.png" title="Hot Deals" dropdown="none" />
+      <MenuItem  title="Home" dropdown="none" />
+      <MenuItem  title="Foods" dropdown="block" />
+      <MenuItem  title="Vegetable" dropdown="block" />
+      <MenuItem  title="Drink" dropdown="none" />
+      <MenuItem  title="Cookies" dropdown="none" />
+      <MenuItem  title="Meat & Seafoods" dropdown="block" />
+      <MenuItem  title="Bakery" dropdown="none" />
+    </div>
+    <div style="display: flex; gap: 5px; margin-left: auto;">
+      <img src="images/fi-rs-headset 1.png" alt="">
+      <div style="display: flex; flex-direction: column;">
+        <span style="font-size: 22px; color: #3BB77E;">1900 - 8888</span>
+        <span style="font-size: 12px; margin: auto;">24/7 Support Center</span>
+      </div>
+      
+    </div>
 
-  <div id="product">
-    <div v-for="pro in products">
-    <Product
-      :tag="pro.tag"
-      :tagcol="pro.tagcol"
-      :img="pro.image"
-      :name="pro.name"
-      :rate="pro.rate"
-      :desc="pro.description"
-      :sellprice="pro.sellPrice"
-      :disPercent="pro.discountPercentage"
-      :disPrice="pro.discountPrice" />
   </div>
-  </div>
-
-</div>
-
+  <RouterView />
 </template>
 
 <script>
-  import MyButton from './components/MyButton.vue';
-  import Category from './components/Category.vue';
-  import Promo from './components/Promo.vue';
-  import Menu from './components/Menu.vue';
-  import Product from './components/Product.vue';
-
-  import { useProductStore } from '@/stores/product';
-  import { mapState } from 'pinia';
-
+  import Search from './components/Search.vue';
+  import MenuItem from './components/MenuItem.vue';
 
   export default {
     name: "App",
     components: {
-      MyButton,
-      Category,
-      Promo,  
-      Menu,
-      Product,
+      Search,
+      MenuItem,
     },
 
     computed: {
-      ...mapState(useProductStore, ['groups']),
-      ...mapState(useProductStore, ['categories']),
-      ...mapState(useProductStore, ['promotions']),
-      ...mapState(useProductStore, ['products']),
     }
   };
   
 </script>
 
 <style scoped>
-  div{
+  #topmenu {
+    width: 1485px;
+    margin: auto;
+    padding: 10px;
     display: flex;
-    gap: 23.7px;
   }
-
-
-  #cate {
+  #bottommenu {
     display: flex;
-    gap: 13px;
-    justify-content: center;
+    width: 1485px;
+    margin: 0 auto 10px auto;
+    padding: 10px;
+    gap: 25px;
+    border: solid gray;
+    border-width: 1px 0 1px 0;
   }
-  #product {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    gap: 13px;
-    justify-content: center;
-  }
-
-  #promo{
-    justify-content: center;
+  #browseallcate {
+    height: 12px;
+    line-height: 12px;
+    padding: 13px;
+    color: white;
+    background-color: #3BB77E;
+    display: flex;
+    gap: 7px;
+    border-radius: 5px;
   }
 </style>
