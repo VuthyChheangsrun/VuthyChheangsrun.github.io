@@ -32,70 +32,80 @@ export const useProductStore = defineStore('product', {
             group: "Milks & Diaries",
             name: "Cake & Milk",
             color: "#F2FCE4",
-            image: "images/burger.png"
+            image: "images/burger.png",
+            item: 14
         },
         {
             id: 2,
             group: "Fruits",
             name: "Peach",
             color: "#FFFCEB",
-            image: "images/peach.png"
+            image: "images/peach.png",
+            item: 17
         },
         {
             id: 3,
             group: "Fruits",
             name: "Organic Kiwi",
             color: "#ECFFEC",
-            image: "images/kiwi.png"
+            image: "images/kiwi.png",
+            item: 21
         },
         {
             id: 4,
             group: "Fruits",
             name: "Red Apple",
             color: "#FEEFEA",
-            image: "images/apple.png"
+            image: "images/apple.png",
+            item: 68
         },
         {
             id: 5,
             group: "Coffees & Teas",
             name: "Snack",
             color: "#FFF3EB",
-            image: "images/snack.png"
+            image: "images/snack.png",
+            item: 34
         },
         {
             id: 6,
             group: "Fruits",
             name: "Black Plums",
             color: "#FFF3FF",
-            image: "images/black.png"
+            image: "images/black.png",
+            item: 25
         },
         {
             id: 7,
             group: "Vegetables",
             name: "Vegetables",
             color: "#F2FCE4",
-            image: "images/cabbage.png"
+            image: "images/cabbage.png",
+            item: 65
         },
         {
             id: 8,
             group: "Coffees & Teas",
             name: "Headphone",
             color: "#FFFCEB",
-            image: "images/headset.png"
+            image: "images/headset.png",
+            item: 33
         },
         {
             id: 9,
             group: "Milks & Diaries",
             name: "Cake & Milk",
             color: "#F2FCE4",
-            image: "images/cakemilk.png"
+            image: "images/cakemilk.png",
+            item: 54
         },
         {
             id: 10,
             group: "Fruits",
             name: "Orange",
             color: "#FFF3FF",
-            image: "images/orange.png"
+            image: "images/orange.png",
+            item: 63
         },
         ],
         products: [

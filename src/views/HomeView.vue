@@ -5,9 +5,8 @@
     <Menu title="Features Categories" :groups="groups" class="menu" />
     <div id="cate">
       <div v-for="cate in categories">
-        <Category :bg="cate.color" :img="cate.image" :name="cate.name" :ammount="cate.id" />
+        <RouterLink :to="`/categories/${cate.id}`"><Category :bg="cate.color" :img="cate.image" :name="cate.name" :ammount="cate.item" /></RouterLink>
       </div>
-      
     </div>
     <div id="promo">
       <div v-for="pro in promotions">
@@ -18,7 +17,7 @@
   
     <div id="product">
       <div v-for="pro in products">
-      <Product
+      <RouterLink :to="`/products/${pro.id}`"><Product
         :tag="pro.tag"
         :tagcol="pro.tagcol"
         :img="pro.image"
@@ -27,7 +26,7 @@
         :desc="pro.description"
         :sellprice="pro.sellPrice"
         :disPercent="pro.discountPercentage"
-        :disPrice="pro.discountPrice" />
+        :disPrice="pro.discountPrice" /></RouterLink>
     </div>
     </div>
   
@@ -79,16 +78,24 @@
         display: flex;
         gap: 13px;
         justify-content: center;
+        margin: auto;
       }
       #product {
         display: grid;
         grid-template-columns: auto auto auto auto auto;
         gap: 13px;
         justify-content: center;
+        margin: auto;
       }
     
       #promo{
         justify-content: center;
+        margin: auto;
+      }
+
+      a{
+        color: black;
+        text-decoration: none;
       }
     </style>
     

@@ -19,8 +19,9 @@
       </svg>
     </div>
     <div style="display: flex; gap: 25px;">
-      <MenuItem icon="images/fi-rs-flame 1.png" title="Hot Deals" dropdown="none" />
-      <MenuItem  title="Home" dropdown="none" />
+      <RouterLink to="/categories/1"><MenuItem icon="images/fi-rs-flame 1.png" title="Hot Deals" dropdown="none" /></RouterLink>
+      
+      <RouterLink to="/"><MenuItem  title="Home" dropdown="none" /></RouterLink>
       <MenuItem  title="Foods" dropdown="block" />
       <MenuItem  title="Vegetable" dropdown="block" />
       <MenuItem  title="Drink" dropdown="none" />
@@ -83,5 +84,12 @@
     display: flex;
     gap: 7px;
     border-radius: 5px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000000;
+    display: flex;
+    align-items: center;
   }
 </style>
