@@ -2,7 +2,7 @@
     <div :style="`background-color: ${bg}; background-image: url(${img});`" id="wrapper">
         <div id="info">
             <span>{{ text }}</span><br>
-            <MyButton id="button" :color="`${buColor}`" />
+            <MyButton id="button" :color="buColor" />
         </div>
     </div>
 </template>

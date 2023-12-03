@@ -1,6 +1,6 @@
 <template>
     <div :style="`background-color: ${bg}`">
-        <img :src="`${img}`" alt="">
+        <img :src="img" alt="">
         <div id="text">
             <span id="name">{{ name }}</span>
             <span id="ammount">{{ ammount }} items</span>

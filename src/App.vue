@@ -1,12 +1,12 @@
 <template>
   <div id="topmenu">
-    <img src="/images/Logomelon.png" alt="" style="height: 50px;">
+    <img src="/images/Logo.png" alt="" style="height: 50px;">
     <Search style="margin: auto 0 auto 0; margin-left: 50px;" />
     <div style="display: flex; gap: 25px; margin-left: auto;">
-      <MenuItem icon="/images/fi-rs-user.png" title="Account" dropdown="none" />
-      <MenuItem icon="/images/icon-compare 1.png" title="Compare" dropdown="none" />
-      <MenuItem icon="/images/fi-rs-heart.png" title="Wishlist" dropdown="none" />
-      <MenuItem icon="/images/fi-rs-shopping-cart.png" title="Cart" dropdown="none" />
+      <MenuItem icon="images/fi-rs-user.png" title="Account" dropdown="none" />
+      <MenuItem icon="images/icon-compare 1.png" title="Compare" dropdown="none" />
+      <MenuItem icon="images/fi-rs-heart.png" title="Wishlist" dropdown="none" />
+      <MenuItem icon="images/fi-rs-shopping-cart.png" title="Cart" dropdown="none" />
     </div>
   </div>
   
@@ -19,7 +19,7 @@
       </svg>
     </div>
     <div style="display: flex; gap: 25px;">
-      <RouterLink to="/categories/1"><MenuItem icon="/images/fi-rs-flame 1.png" title="Hot Deals" dropdown="none" /></RouterLink>
+      <RouterLink to="/categories/1"><MenuItem icon="images/fi-rs-flame 1.png" title="Hot Deals" dropdown="none" /></RouterLink>
       
       <RouterLink to="/"><MenuItem  title="Home" dropdown="none" /></RouterLink>
       <MenuItem  title="Foods" dropdown="block" />
