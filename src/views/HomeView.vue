@@ -10,7 +10,9 @@
     </div>
     <div id="promo">
       <div v-for="pro in promotions">
-        <Promo :bg="pro.color" :img="pro.image" :text="pro.title" :buColor="pro.buColor"  />
+        <RouterLink :to="`/products/${pro.id}`">
+          <Promo :bg="pro.color" :img="pro.image" :text="pro.title" :buColor="pro.buColor"  />
+        </RouterLink>
       </div>
     </div>
     <Menu title="Popular Products" :groups="groups" />
