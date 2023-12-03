@@ -36,14 +36,6 @@
         computed: {
             ...mapState(useProductStore, ['categories']),
 
-            // clickedcategories () {
-            //     for (cate in categories) {
-            //         if (cate.id == categoryId){
-            //             return cate;
-            //         }
-            //     }
-
-            // }
         },
         props: ['categoryId']
     };
