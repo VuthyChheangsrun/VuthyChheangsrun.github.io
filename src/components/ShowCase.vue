@@ -6,13 +6,13 @@
             <span id="smalltext">Sign up for the daily newsletter</span>
             <br><br><br><br>
             <form action="" id="form">
-                <img id="plane" src="images/fi-rs-paper-plane 1.png" alt="">
+                <img id="plane" src="/images/fi-rs-paper-plane 1.png" alt="">
                 <input id="email" type="text" placeholder="Your email address">
                 <button id="hit" type="submit">Subscribe</button>
             </form>
         </div>
         
-        <img id="img" src="images/fresh-apples-shopping-mesh-bag-with-branch-apples-removebg 1.png" alt="">
+        <img id="img" src="/images/fresh-apples-shopping-mesh-bag-with-branch-apples-removebg 1.png" alt="">
         
         
     </div>
@@ -22,7 +22,7 @@
     #wrapper {
         width: 1485px;
         height: 358px;
-        background-image: url("images/showcasebg.png");
+        background-image: url("/images/showcasebg.png");
         background-color: bisque;
         margin: auto;
         border-radius: 10px;
