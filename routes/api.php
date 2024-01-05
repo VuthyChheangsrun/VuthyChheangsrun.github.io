@@ -18,6 +18,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('/', function (Request $request) {
+    return "Welcome page";
+});
+
 Route::get('/categories', function (Request $request) {
     return "Get all categories";
 });
@@ -53,5 +57,3 @@ Route::delete('/products/{productId}', function (Request $request) {
 Route::get('/categories/{categoryId}/products', function (Request $request) {
     return "Get all products belong to categoryId";
 });
-
-
