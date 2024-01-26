@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use app\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,3 +58,8 @@ Route::delete('/products/{productId}', function (Request $request) {
 Route::get('/categories/{categoryId}/products', function (Request $request) {
     return "Get all products belong to categoryId";
 });
+
+
+Route::post('/register', [AuthController::class, 'register']);
+
+Route::post('/login', [AuthController::class, 'login']);
