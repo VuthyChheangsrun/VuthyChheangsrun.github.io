@@ -3,37 +3,59 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Category;
 
 class CategoryController extends Controller
 {
     // --- GET /api/categories
     public function getCategories(){
-        Category::all();
+        $categories = Category::all();
+        return $categories;
     }
     
     // --- POST /api/categories
-    public function createCategories(){
-        $category = new Category;
+    public function createCategory(Request $request){
+        $category = new Category();
         $category->name = $request->name;
         $category->save();
+
+        return [ "message" => "success", "data" => $category ];
     }
 
     // --- GET /api/categories/{categoryId}
-    public function getCategories($categoryId){
+    public function getCategory($categoryId){
         $category = Category::find($categoryId);
+        if ($category) {
+            return $category;
+        } else {
+            return response([ "message" => "category not found"], 400);
+        }
     }
 
     // --- PATCH /api/categories/{categoryId}
     public function updateCategories($categoryId){
-        $category = Category::find($categoryId);
-        $category->name = $request->name;
-        $category->save();
+        $categoryFound = Category::find($categoryId);
+        if ($categoryFound) {
+            $categoryFound->name = $request->get('name');
+            $categoryFound->save();
+
+            return $categoryFound;
+        } else {
+            return response([ "message" => "category not found"], 400);
+        }
     }
 
     // --- DELETE /api/categories/{categoryId}
     public function deleteCategories($categoryId){
-        $category = Category::find($categoryId);
-        $category->delete();
+        $categoryFound = Category::find($categoryId);
+
+        if ($categoryFound) {
+            $categoryFound->delete();
+
+            return ["message" => "delete success"];
+        } else {
+            return response([ "message" => "category not found"], 400);
+        }
     }
 
 }

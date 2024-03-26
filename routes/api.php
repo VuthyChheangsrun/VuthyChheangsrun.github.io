@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use app\Http\Controllers\AuthController;
+use App\Http\Controllers\CategoryController;
+use app\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,47 +20,30 @@ use app\Http\Controllers\AuthController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-
-Route::get('/', function (Request $request) {
-    return "Welcome page";
+Route::middleware('auth:api')->get('/test', function (Request $request) {
+    return "test";
 });
 
-Route::get('/categories', function (Request $request) {
-    return "Get all categories";
-});
-Route::post('/categories', function (Request $request) {
-    return "Create 1 category";
-});
-Route::get('/categories/{categoryId}', function (Request $request) {
-    return "get 1 category by categoryId";
-});
-Route::patch('/categories/{categoryId}', function (Request $request) {
-    return "Update 1 category";
-});
-Route::delete('/categories/{categoryId}', function (Request $request) {
-    return "Delete 1 category";
-});
+Route::get('/', function (Request $request) { return "Welcome page"; });
+
+Route::middleware(['auth:api','authorization:admin'])->group(function() {
 
 
-Route::get('/products', function (Request $request) {
-    return "Get all products";
-});
-Route::post('/products', function (Request $request) {
-    return "Create 1 product";
-});
-Route::get('/products/{productId}', function (Request $request) {
-    return "get 1 product";
-});
-Route::patch('/products/{productId}', function (Request $request) {
-    return "update 1 product";
-});
-Route::delete('/products/{productId}', function (Request $request) {
-    return "Delete 1 product";
-});
-Route::get('/categories/{categoryId}/products', function (Request $request) {
-    return "Get all products belong to categoryId";
-});
+Route::get('/categories', [CategoryController::class, 'getCategories']);
+Route::post('/categories', [CategoryController::class, 'createCategory']);
+Route::get('/categories/{categoryId}', [CategoryController::class, 'getCategory']);
+Route::patch('/categories/{categoryId}', [CategoryController::class, 'updateCategories']);
+Route::delete('/categories/{categoryId}', [CategoryController::class, 'deleteCategories']);
 
+
+Route::get('/products', [ProductController::class, 'getProducts']);
+Route::post('/products', [ProductController::class, 'createProducts']);
+Route::get('/products/{productId}', [ProductController::class, 'getProduct']);
+Route::patch('/products/{productId}', [ProductController::class, 'updateProducts']);
+Route::delete('/products/{productId}', [ProductController::class, 'deleteProducts']);
+Route::get('/categories/{categoryId}/products', [ProductController::class, 'getAllProductsOfCategory']);
+
+});
 
 Route::post('/register', [AuthController::class, 'register']);
 

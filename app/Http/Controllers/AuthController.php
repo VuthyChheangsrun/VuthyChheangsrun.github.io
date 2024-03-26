@@ -53,10 +53,10 @@ class AuthController extends Controller
             $user->email_verified_at = Carbon::now();
 
             $user->save();
-            return ["message" => "OTP os valid, your account is registered"]
+            return ["message" => "OTP os valid, your account is registered"];
         }else {
             // the OTP is not valid
-            return response(["message" => "OTP is invalid"], 400)
+            return response(["message" => "OTP is invalid"], 400);
         }
     }
 }
