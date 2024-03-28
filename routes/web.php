@@ -21,6 +21,7 @@ Route::get('/test', function () {
     return "hi";
 });
 
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -32,3 +33,9 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('/', [HomeController::class, 'renderHome']);
+
+Route::get('/product/add', [Product::class, 'add'])
+Route::get('/product/edit', [Product::class, 'edit'])
+Route::get('/product/store', [Product::class, 'store'])
