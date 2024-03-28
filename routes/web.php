@@ -36,6 +36,6 @@ require __DIR__.'/auth.php';
 
 Route::get('/', [HomeController::class, 'renderHome']);
 
-Route::get('/product/add', [Product::class, 'add'])
-Route::get('/product/edit', [Product::class, 'edit'])
-Route::get('/product/store', [Product::class, 'store'])
+Route::get('/product/add', [Product::class, 'add']);
+Route::get('/product/edit', [Product::class, 'edit']);
+Route::get('/product/store', [Product::class, 'store']);
