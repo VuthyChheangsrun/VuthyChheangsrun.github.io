@@ -7,6 +7,24 @@ use App\Models\Product;
 
 class ProductController extends Controller
 {
+    public function add() {
+        return view("products.form");
+    }
+    
+    public function store(Request $request) {
+        $product = new Product;
+        $product->name = $request->name;
+        $product->category_id = $request->category_id;
+        $product->pricing = $request->pricing;
+        $product->description = $request->description;
+        $product->images = $request->images;
+        $product->discount = $request->discount;
+        $product->save();
+
+        return redirect("/");
+    }
+    
+
     // --- GET /api/products
     public function getProducts(){
         $products = Product::all();
