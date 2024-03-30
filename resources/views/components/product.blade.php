@@ -58,6 +58,7 @@
 
     #desc{
         display: flex;
+        width: 255px;
         flex-direction: column;
         gap: 10px;
         position: absolute;
